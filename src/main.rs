@@ -1,6 +1,8 @@
 mod core_functional;
-use core_functional::read_csv::*;
+use core_functional::reader::*;
+
+//const filepath: &str = "/Users/blcklptn/Documents/Datalyzer/src/tests/testfiles/test.csv";
 
 fn main() {
-    println!("Hello, world!");
+    println!("HEllo World!");
 }
