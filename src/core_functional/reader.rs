@@ -1,41 +1,38 @@
+use std::fmt::{Debug, Display};
 use std::fs::File;
 use std::io::prelude::*;
 
+pub struct Csv;
+pub struct OldExcel;
+pub struct NewExcel;
 
-pub trait Reader<T = String> {
-    fn read(filepath: T) -> Self;
-    fn file_extension(filepath: T) -> T;
-}
 
-struct Csv<T> {
-    filepath: T,
-    extention: T, 
-}
-
-struct OldExcel<T> {
-    filepath: T,
-    extention: T
-}
-
-fn simplify_read<T>(filepath: T) -> String {
-    todo!();
-}
-
-impl<T> Reader<T> for OldExcel<T> {
-    fn read(filepath: T) -> OldExcel<T> {
+pub trait Reader {
+    fn new() -> Self;
+    
+    fn simply_reader(&self, filepath: String) {
         todo!();
     }
-    fn file_extension(filepath: T) -> T {
+
+    fn read(&self, filepath: String);
+}
+
+
+impl Reader for OldExcel {
+    fn new() -> Self {
+        Self 
+    }
+    fn read(&self, filepath: String) {
         todo!();
     }
 }
 
-impl<T> Reader<T> for Csv<T> {
-    fn read(filepath: T) -> Csv<T> {
-        todo!();
+impl Reader for Csv {
+    fn new() -> Self {
+        Self
     }
 
-    fn file_extension(filepath: T) -> T {
+    fn read(&self, filepath: String) {
         todo!();
     }
 }

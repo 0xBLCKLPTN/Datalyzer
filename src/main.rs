@@ -1,8 +1,9 @@
 mod core_functional;
 use core_functional::reader::*;
 
-//const filepath: &str = "/Users/blcklptn/Documents/Datalyzer/src/tests/testfiles/test.csv";
+const filepath: &str = "/Users/blcklptn/Documents/Datalyzer/src/tests/testfiles/test.csv";
 
 fn main() {
-    println!("HEllo World!");
+    let data = Csv {};
+    let content = Csv.simply_reader(filepath.to_string());
 }
